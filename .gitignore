@@ -1,0 +1,13 @@
+.DS_Store
+md5sums
+content/*
+build/*/working*
+build.*
+*.deb
+*.udeb
+*.changes
+*.buildinfo
+._*
+src_repo_hash_HEAD
+config_pkgver
+config_aptdir

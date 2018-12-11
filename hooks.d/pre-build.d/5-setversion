@@ -1,0 +1,14 @@
+
+(
+    FILE="debian/changelog"
+    if [ -x ./ffbuild/version.sh ]; then 
+        ver="$(./ffbuild/version.sh | tr -d 'vdirty-')"
+    else
+        ver="$(cat RELEASE | tr -d 'v')"
+    fi
+    . ../config_pkgver
+    echo "Setting version to $ver-xbian$config_deb_version"
+    sed -i "0,/-.*)/s//-xbian$config_deb_version)/" $FILE
+    sed -i "0,/jessie/s//$(lsb_release -sc)/" $FILE
+    sed -i "0,/__DATE__/s//$(LC_ALL=C date "+%a, %e %b %Y %X %z")/" $FILE
+)

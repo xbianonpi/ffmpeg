@@ -1,0 +1,2 @@
+DEB_CFLAGS_APPEND=-mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp
+DEB_CXXFLAGS_APPEND=$DEB_CFLAGS_APPEND
