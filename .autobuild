@@ -1,2 +1,2 @@
-rpi-4.0   staging rpi-${config_os_version}
-rpi2-4.0  staging rpi2-${config_os_version}
+rpi-4.0   stable rpi-${config_os_version}
+rpi2-4.0  stable rpi2-${config_os_version}
